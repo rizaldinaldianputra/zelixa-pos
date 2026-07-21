@@ -2,6 +2,7 @@
 import { Menu, X } from 'lucide-react';
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import Link from 'next/link';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -19,15 +20,15 @@ export default function Navbar() {
     <nav className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-white/80 backdrop-blur-md border-b border-slate-100 shadow-sm py-3' : 'bg-transparent py-5'}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center">
-          <div className="flex items-center gap-2">
+          <Link href="/" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
             <img src="/logo.png" alt="Zelixa POS Logo" className="h-10 md:h-12 w-auto object-contain" />
-          </div>
+          </Link>
 
           <div className="hidden md:flex items-center space-x-8">
             <a href="#fitur" className="text-slate-600 hover:text-[#2F8FFF] font-medium transition-colors">Fitur</a>
             <a href="#perbandingan" className="text-slate-600 hover:text-[#2F8FFF] font-medium transition-colors">Perbandingan</a>
             <a href="#pricing" className="text-slate-600 hover:text-[#2F8FFF] font-medium transition-colors">Harga</a>
-            <motion.button 
+            <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="bg-gradient-to-br from-[#58D2FF] via-[#2F8FFF] to-[#081E73] text-white px-6 py-2.5 rounded-xl font-bold transition-all shadow-md hover:shadow-lg border-0"
@@ -45,7 +46,7 @@ export default function Navbar() {
       </div>
       <AnimatePresence>
         {isOpen && (
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}

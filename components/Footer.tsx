@@ -11,10 +11,10 @@ export default function Footer() {
 
           {/* Company Info */}
           <div className="lg:col-span-4 pr-6">
-            <div className="flex items-center gap-3 mb-6">
+            <Link href="/" className="flex items-center gap-3 mb-6 hover:opacity-80 transition-opacity w-fit">
               <img src="/logo.png" alt="Zelixa POS Logo" className="h-10 w-auto object-contain" />
               <span className="font-bold text-2xl tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-[#58D2FF] to-[#081E73]">Zelixa POS</span>
-            </div>
+            </Link>
             <p className="text-slate-500 max-w-sm mb-6 leading-relaxed">
               Solusi point of sale terbaik untuk memajukan UMKM dan bisnis modern di Indonesia dengan teknologi terdepan.
             </p>
