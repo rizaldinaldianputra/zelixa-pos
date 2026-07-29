@@ -104,7 +104,7 @@ const containerVariants = {
 
 const cardVariants = {
   hidden: { opacity: 0, y: 40 },
-  show: { opacity: 1, y: 0, transition: { type: 'spring', bounce: 0.4, duration: 0.7 } }
+  show: { opacity: 1, y: 0, transition: { type: 'spring' as const, bounce: 0.4, duration: 0.7 } }
 };
 
 export default function WhyZelixa() {
