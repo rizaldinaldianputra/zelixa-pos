@@ -28,13 +28,15 @@ export default function Navbar() {
             <a href="#fitur" className="text-slate-600 hover:text-[#2F8FFF] font-medium transition-colors">Fitur</a>
             <a href="#perbandingan" className="text-slate-600 hover:text-[#2F8FFF] font-medium transition-colors">Perbandingan</a>
             <a href="#pricing" className="text-slate-600 hover:text-[#2F8FFF] font-medium transition-colors">Harga</a>
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="bg-gradient-to-br from-[#58D2FF] via-[#2F8FFF] to-[#081E73] text-white px-6 py-2.5 rounded-xl font-bold transition-all shadow-md hover:shadow-lg border-0"
-            >
-              Coba Gratis
-            </motion.button>
+            <Link href="/login" passHref>
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="bg-gradient-to-br from-[#58D2FF] via-[#2F8FFF] to-[#081E73] text-white px-6 py-2.5 rounded-xl font-bold transition-all shadow-md hover:shadow-lg border-0"
+              >
+                Login
+              </motion.button>
+            </Link>
           </div>
 
           <div className="md:hidden flex items-center">
@@ -55,9 +57,11 @@ export default function Navbar() {
             <a href="#fitur" onClick={() => setIsOpen(false)} className="block text-slate-600 font-medium py-2">Fitur</a>
             <a href="#perbandingan" onClick={() => setIsOpen(false)} className="block text-slate-600 font-medium py-2">Perbandingan</a>
             <a href="#pricing" onClick={() => setIsOpen(false)} className="block text-slate-600 font-medium py-2">Harga</a>
-            <button className="w-full bg-gradient-to-br from-[#58D2FF] via-[#2F8FFF] to-[#081E73] text-white px-6 py-3 rounded-xl font-bold">
-              Coba Gratis
-            </button>
+            <Link href="/login" passHref legacyBehavior>
+              <a onClick={() => setIsOpen(false)} className="block w-full bg-gradient-to-br from-[#58D2FF] via-[#2F8FFF] to-[#081E73] text-white px-6 py-3 rounded-xl font-bold text-center">
+                Login
+              </a>
+            </Link>
           </motion.div>
         )}
       </AnimatePresence>
