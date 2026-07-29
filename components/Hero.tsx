@@ -98,6 +98,8 @@ export default function Hero() {
                       src={heroImages[currentIndex] || heroImages[0]}
                       alt="Zelixa POS App"
                       fill
+                      sizes="(max-width: 768px) 100vw, 600px"
+                      priority={currentIndex === 0}
                       className="object-contain bg-slate-50 p-2"
                     />
                   </motion.div>
