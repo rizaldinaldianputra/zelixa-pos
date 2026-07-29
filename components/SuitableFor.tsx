@@ -72,7 +72,7 @@ const containerVariants = {
 
 const cardVariants = {
   hidden: { opacity: 0, y: 30, scale: 0.95 },
-  show: { opacity: 1, y: 0, scale: 1, transition: { type: 'spring', bounce: 0.35 } }
+  show: { opacity: 1, y: 0, scale: 1, transition: { type: 'spring' as const, bounce: 0.35 } }
 };
 
 export default function SuitableFor() {
