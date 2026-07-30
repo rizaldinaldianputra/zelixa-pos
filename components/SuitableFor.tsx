@@ -1,5 +1,5 @@
 'use client';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence, Variants } from 'framer-motion';
 import { useState } from 'react';
 import {
   Coffee, ShoppingBag, Utensils, Scissors, Store, Book,
@@ -63,16 +63,16 @@ const businesses = [
   },
 ];
 
-const containerVariants = {
+const containerVariants: Variants = {
   hidden: {},
   show: {
     transition: { staggerChildren: 0.07 }
   }
 };
 
-const cardVariants = {
+const cardVariants: Variants = {
   hidden: { opacity: 0, y: 30, scale: 0.95 },
-  show: { opacity: 1, y: 0, scale: 1, transition: { type: 'spring' as const, bounce: 0.35 } }
+  show: { opacity: 1, y: 0, scale: 1, transition: { type: 'spring', bounce: 0.35 } }
 };
 
 export default function SuitableFor() {
@@ -142,7 +142,7 @@ export default function SuitableFor() {
               >
                 {/* Card base — White with blue shadow */}
                 <div className={`relative h-full bg-white rounded-3xl p-7 transition-all duration-300 ${isActive ? 'shadow-[0_15px_40px_-15px_rgba(47,143,255,0.4)] border-[#2F8FFF]/30 -translate-y-1' : 'shadow-lg shadow-blue-900/5 border-slate-100'} flex flex-col gap-4 border`}>
-                  
+
                   {/* Icon */}
                   <motion.div
                     animate={isActive ? { scale: 1.15, rotate: -6 } : { scale: 1, rotate: 0 }}
